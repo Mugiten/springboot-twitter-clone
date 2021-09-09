@@ -1,20 +1,24 @@
 package com.example.demo;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
-@RestController
+@Controller
 public class TwitterController{
 	
-	@GetMapping("/")
-	public String index() {
-		return "Grettings from Spring Boot!";
+	@RequestMapping("/")
+	public String index(Model model) {
+		model.addAttribute("message", "Welcome to spring!");
+		return "index";
 	}
 	
 	@RequestMapping("/testing")
-	public String usemap() {
-		return "Mapping is Cool!";
+	public String testing(Model model) {
+		model.addAttribute("message", "Welcome to spring boot!");
+		return "testing";
 	}
 }
