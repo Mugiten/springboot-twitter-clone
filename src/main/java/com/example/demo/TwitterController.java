@@ -1,7 +1,9 @@
 package com.example.demo;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 
 @RestController
 public class TwitterController{
@@ -11,7 +13,7 @@ public class TwitterController{
 		return "Grettings from Spring Boot!";
 	}
 	
-	@GetMapping("/testing")
+	@RequestMapping("/testing")
 	public String usemap() {
 		return "Mapping is Cool!";
 	}
