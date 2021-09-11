@@ -12,7 +12,7 @@ public class TwitterController{
 	
 	@RequestMapping("/")
 	public String index(Model model) {
-		model.addAttribute("message", "Welcome to spring!");
+		//model.addAttribute("message", "Welcome to spring!");
 		return "index";
 	}
 	
@@ -20,5 +20,10 @@ public class TwitterController{
 	public String testing(Model model) {
 		model.addAttribute("message", "Welcome to spring boot!");
 		return "testing";
+	}
+	
+	@RequestMapping("/signup")
+	public String signup(Model model) {
+		return "signup";
 	}
 }
