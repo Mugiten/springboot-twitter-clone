@@ -1,7 +1,5 @@
 
 <!DOCTYPE html>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html lang="en">
 	<head>
 		<title>Sign Up</title>
@@ -13,6 +11,10 @@
 		      
 		      <div class="col-md-10 mx-auto col-lg-5">
 		        <form class="p-4 p-md-5 border rounded-3 bg-light">
+		          <div class="form-floating mb-3">
+		            <input type="uname" class="form-control" id="floatingInput" placeholder="UserName">
+		            <label for="floatingInput">User Name</label>
+		          </div>
 		          <div class="form-floating mb-3">
 		            <input type="fname" class="form-control" id="floatingInput" placeholder="FirstName">
 		            <label for="floatingInput">First Name</label>
@@ -29,8 +31,14 @@
 		            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
 		            <label for="floatingPassword">Password</label>
 		          </div>
+		          <div class="form-floating mb-3">
+		            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+		            <label for="floatingPassword">Password</label>
+		          </div>
 		          
 		          <button class="w-100 btn btn-lg btn-info" type="submit">Sign Up</button>
+		          <hr class="my-4">
+		          <small class="text-muted">If you already have an account, <a href="/">log in</a>.</small>
 		          
 		        </form>
 		      </div>
