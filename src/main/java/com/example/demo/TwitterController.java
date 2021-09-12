@@ -22,6 +22,11 @@ public class TwitterController{
 		return "testing";
 	}
 	
+	@RequestMapping("/login")
+	public String login(Model model) {
+		return "login";
+	}
+	
 	@RequestMapping("/signup")
 	public String signup(Model model) {
 		return "signup";
