@@ -26,4 +26,9 @@ public class TwitterController{
 	public String signup(Model model) {
 		return "signup";
 	}
+	
+	@RequestMapping("/login")
+	public String login(Model model) {
+		return "login";
+	}
 }

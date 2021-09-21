@@ -104,11 +104,11 @@ public class User implements UserDetails{
     }
 
 	@Override
-	public Collection<? extends GrantedAuthority> getAuthorities() {
-		Set<GrantedAuthority> authorities = new HashSet<GrantedAuthority>();
+	public Set<GrantedAuthority> getAuthorities() {
+        Set<GrantedAuthority> authorities = new HashSet<GrantedAuthority>();
         authorities.add(new SimpleGrantedAuthority("USER"));
         return authorities;
-	}
+    }
 
 	
 }
