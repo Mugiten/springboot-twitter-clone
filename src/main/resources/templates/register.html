@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<title>Sign Up</title>
 		<link href="webjars/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet">
@@ -10,29 +10,25 @@
 		    <div class="row align-items-center g-lg-5 py-5">
 		      
 		      <div class="col-md-10 mx-auto col-lg-5">
-		        <form class="p-4 p-md-5 border rounded-3 bg-light">
+		        <form class="p-4 p-md-5 border rounded-3 bg-light" th:action="@{/process_register}" th:object="${user}" method="post">
 		          <div class="form-floating mb-3">
-		            <input type="uname" class="form-control" id="floatingInput" placeholder="UserName">
+		            <input type="text" class="form-control" id="floatingInput" placeholder="UserName" th:field="*{username}">
 		            <label for="floatingInput">User Name</label>
 		          </div>
 		          <div class="form-floating mb-3">
-		            <input type="fname" class="form-control" id="floatingInput" placeholder="FirstName">
+		            <input type="text" class="form-control" id="floatingInput" placeholder="FirstName" th:field="*{firstName}">
 		            <label for="floatingInput">First Name</label>
 		          </div>
 		          <div class="form-floating mb-3">
-		            <input type="lname" class="form-control" id="floatingInput" placeholder="LastName">
+		            <input type="text" class="form-control" id="floatingInput" placeholder="LastName" th:field="*{lastName}">
 		            <label for="floatingInput">Last Name</label>
 		          </div>	
 		          <div class="form-floating mb-3">
-		            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+		            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" th:field="*{email}">
 		            <label for="floatingInput">Email address</label>
 		          </div>
 		          <div class="form-floating mb-3">
-		            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-		            <label for="floatingPassword">Password</label>
-		          </div>
-		          <div class="form-floating mb-3">
-		            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+		            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" th:field="*{password}">
 		            <label for="floatingPassword">Password</label>
 		          </div>
 		          
@@ -48,5 +44,7 @@
 		 
 		<script src="webjars/jquery/3.6.0/jquery.min.js"></script>
         <script src="webjars/bootstrap/5.1.0/js/bootstrap.min.js"></script>
+        <script>
+        </script>
 	</body>
 </html>
