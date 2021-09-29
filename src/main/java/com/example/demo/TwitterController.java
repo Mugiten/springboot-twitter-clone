@@ -27,7 +27,7 @@ public class TwitterController{
 		return "testing";
 	}
 	
-	@RequestMapping("/register")
+	@GetMapping("/register")
 	public String signup(Model model) {
 		User user = new User();
 		model.addAttribute("user", user);

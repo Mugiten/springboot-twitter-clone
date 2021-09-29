@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:tiles="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<title>Index</title>
 		<link href="webjars/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet">
@@ -28,7 +28,7 @@
 		          </div>
 		          <button class="w-100 btn btn-lg btn-info" type="submit">Login</button>
 		          <hr class="my-4">
-		          <small class="text-muted">If you don't have an account, <a href="register">sign up</a>.</small>
+		          <small class="text-muted">If you don't have an account, <a th:href="@{/register}">sign up</a>.</small>
 		        </form>
 		      </div>
 		    </div>

@@ -30,7 +30,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
         http
             .authorizeRequests()
                 .antMatchers("/webjars/**", "/register").permitAll() 
-                .anyRequest().authenticated()
+                .anyRequest().permitAll()
                 .and()
             .formLogin()
                 .loginPage("/login")
