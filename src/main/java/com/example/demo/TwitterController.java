@@ -14,6 +14,7 @@ public class TwitterController{
 	
 	@Autowired
 	private UserRepository userRepo;
+	private TweetRepository tweetRepo;
 	
 	@RequestMapping("/")
 	public String index(Model model) {
@@ -39,6 +40,13 @@ public class TwitterController{
 		return "login";
 	}
 	
+	@RequestMapping("/tweeting")
+	public String tweeting(Model model) {
+		Tweet tweet = new Tweet();
+		model.addAttribute(tweet);
+		return "tweeting";
+	}
+	
 	@PostMapping("/process_register")
 	public String processRegister(User user) {
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
@@ -49,4 +57,13 @@ public class TwitterController{
 		
 		return "register_success";
 	}
+	
+	@PostMapping("/process_tweet")
+	public String processTweet(Tweet tweet) {
+		
+		tweetRepo.save(tweet);
+		
+		return "tweet_success";
+	}
+	
 }
