@@ -43,7 +43,7 @@ public class TwitterController{
 	@RequestMapping("/tweeting")
 	public String tweeting(Model model) {
 		Tweet tweet = new Tweet();
-		model.addAttribute(tweet);
+		model.addAttribute("tweet", tweet);
 		return "tweeting";
 	}
 	
